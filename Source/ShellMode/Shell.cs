@@ -7,7 +7,7 @@ namespace OpenOS.Source.ShellMode
     {
         public Shell()
         {
-            Console.WriteLine("\nSimpleOS 1.0: Shell Mode");
+            Console.WriteLine($"\nSimpleOS v1.0: Shell Mode");
             Console.WriteLine("SeboTimes 2022\n");
         }
 
