@@ -7,7 +7,7 @@ namespace OpenOS.Source.ShellMode
     {
         public Shell()
         {
-            Console.WriteLine("SimpleOS 1.0: Shell Mode");
+            Console.WriteLine("\nSimpleOS 1.0: Shell Mode");
             Console.WriteLine("SeboTimes 2022\n");
         }
 
@@ -15,7 +15,7 @@ namespace OpenOS.Source.ShellMode
         {
             try
             {
-                string[] commands = { "shutdown", "reboot", "help", "ger", "echo.data" };
+                string[] commands = { "shutdown", "reboot", "help", "clear", "echo.data" };
 
                 Console.Write("SimpleOS> ");
                 string shellInput = Console.ReadLine();
@@ -38,7 +38,7 @@ namespace OpenOS.Source.ShellMode
                 }
                 else if (shellInput == commands[3])
                 {
-                    //Sys.KeyboardManager.SetKeyLayout("e");
+                    Console.Clear();
                 }
                 else if (shellInput == commands[4])
                 {
@@ -51,12 +51,12 @@ namespace OpenOS.Source.ShellMode
                 {
                     Console.WriteLine("Command not found.");
                 }
-                Console.WriteLine();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }
+            Console.WriteLine();
         }
     }
 }
