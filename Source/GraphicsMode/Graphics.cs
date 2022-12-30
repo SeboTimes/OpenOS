@@ -12,15 +12,13 @@ namespace OpenOS.Source.GraphicsMode
 
         public Graphics() 
         {
-            canvas = FullScreenCanvas.GetCurrentFullScreenCanvas();
-            pen = new Pen(Color.White);
-
-            //canv
+            canvas = FullScreenCanvas.GetFullScreenCanvas(new Mode(640, 480, ColorDepth.ColorDepth32));
+            pen = new Pen(Color.White, 5);
         }
 
         public void Draw()
         {
-            //canvas
+            canvas.Clear();
         }
     }
 }

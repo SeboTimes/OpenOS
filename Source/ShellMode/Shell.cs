@@ -1,6 +1,8 @@
 ﻿using System;
 using Sys = Cosmos.System;
 
+using OpenOS.Source.GraphicsMode;
+
 namespace OpenOS.Source.ShellMode
 {
     internal class Shell
@@ -15,7 +17,7 @@ namespace OpenOS.Source.ShellMode
         {
             try
             {
-                string[] commands = { "shutdown", "reboot", "help", "clear", "echo.data" };
+                string[] commands = { "shutdown", "reboot", "help", "clear", "gui", "echo.data" };
 
                 Console.Write("SimpleOS> ");
                 string shellInput = Console.ReadLine();
@@ -41,6 +43,11 @@ namespace OpenOS.Source.ShellMode
                     Console.Clear();
                 }
                 else if (shellInput == commands[4])
+                {
+                    Graphics graphics= new Graphics();
+                    graphics.Draw();
+                }
+                else if (shellInput == commands[5])
                 {
                     Console.WriteLine("IsQEMU: " + Sys.VMTools.IsQEMU.ToString());
                     Console.WriteLine("IsVirtualBox: " + Sys.VMTools.IsVirtualBox.ToString());
