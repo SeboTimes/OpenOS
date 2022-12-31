@@ -6,7 +6,10 @@ Anyways OpenOS is a simple os to run on bad PCs.
 ## Features:
 - Shell Mode:
     - System power management
+    - Echo file system data
     - Echo system detected data
+- Graphics Mode:
+    - Display a weird picture.
     
 ---
 ## Dependencies:
