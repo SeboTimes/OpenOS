@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 using Sys = Cosmos.System;
 
-using OpenOS.Source.ShellMode;
+using OpenOS.Source;
 
 namespace OpenOS
 {
     public class Kernel : Sys.Kernel
     {
-        private Shell shell;
+        Shell shell;
 
         protected override void BeforeRun()
         {
